@@ -3,7 +3,6 @@ package com.example.springframework.book;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.Date;
 
 @Service
 public class BookService {
@@ -13,10 +12,8 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    public Book save(Book book) {
-        book.setCreated(new Date());
-        book.setBookStatus(BookStatus.DRAFT);
-        return bookRepository.save(book);
+    public void printBookRepository() {
+        System.out.println(bookRepository.getClass());
     }
 
     @PostConstruct
