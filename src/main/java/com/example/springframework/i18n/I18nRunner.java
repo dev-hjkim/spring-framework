@@ -16,11 +16,11 @@ public class I18nRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        while (true) {
+//        while (true) {
             System.out.println(messageSource.getMessage("greeting", new String[]{"hjkim"}, Locale.KOREA));
             System.out.println(messageSource.getMessage("greeting", new String[]{"hjkim"}, Locale.getDefault()));
             Thread.sleep(1000);
-        }
+//        }
 
     }
 }
