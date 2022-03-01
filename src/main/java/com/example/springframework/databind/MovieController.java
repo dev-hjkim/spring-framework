@@ -9,11 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MovieController {
 
-    @InitBinder
-    public void init(WebDataBinder webDataBinder) {
-        webDataBinder.registerCustomEditor(Movie.class, new MovieEditor());
-    }
-
     @GetMapping("/movie/{movie}")
     public String getMovie(@PathVariable Movie movie) {
         System.out.println(movie);
