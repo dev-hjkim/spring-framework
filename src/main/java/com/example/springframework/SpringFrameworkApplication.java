@@ -1,6 +1,7 @@
 package com.example.springframework;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +15,9 @@ import org.springframework.scheduling.annotation.EnableAsync;
 public class SpringFrameworkApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringFrameworkApplication.class, args);
+        SpringApplication app = new SpringApplication(SpringFrameworkApplication.class);
+        app.setWebApplicationType(WebApplicationType.NONE);
+        app.run(args);
     }
 
     @Bean
