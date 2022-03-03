@@ -14,10 +14,10 @@ public class DatabindRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println(conversionService);
+//        System.out.println(conversionService);
         // 기본 등록된 converter 정보들 출력
 
-        System.out.println(conversionService.getClass().toString());
+//        System.out.println(conversionService.getClass().toString());
         // WebConversionService
         // DefaultFormatting ConversionService 상속, WebConversionService보다 많은 기능 제공
     }
