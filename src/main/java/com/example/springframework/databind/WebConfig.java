@@ -8,6 +8,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addFormatters(FormatterRegistry registry) {
-        registry.addConverter(new MovieConverter.StringToMovieConverter()); // bean이 아니다
+        registry.addFormatter(new MovieFormatter()); // bean이 아니다
     }
 }
